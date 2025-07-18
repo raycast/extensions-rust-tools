@@ -1,0 +1,20 @@
+[workspace]
+members = [
+    "raycast-rust-macros",
+    "raycast-rust-runtime",
+    "example",
+]
+resolver = "2"
+
+[workspace.dependencies]
+tokio = { version = "1.0", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+anyhow = "1.0"
+inventory = "0.3"
+syn = { version = "2.0", features = ["full"] }
+quote = "1.0"
+proc-macro2 = "1.0"
+cargo_metadata = "0.18"
+walkdir = "2.0"
+handlebars = "4.0"

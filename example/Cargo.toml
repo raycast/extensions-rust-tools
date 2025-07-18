@@ -1,0 +1,15 @@
+[package]
+name = "basic-usage"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "rust-api"
+path = "src/main.rs"
+
+[dependencies]
+raycast-rust-macros = { path = "../raycast-rust-macros" }
+raycast-rust-runtime = { path = "../raycast-rust-runtime" }
+tokio = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
