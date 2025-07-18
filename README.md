@@ -8,6 +8,7 @@ This Rust Crate contains code generation macros and plugins to build a communica
 ### Requirements
 
 - [Rustup](https://rustup.rs/)
+- Install Rust Windows msvc target via rustup: `rustup target add x86_64-pc-windows-msvc`
 
 ## Using the Package
 
@@ -30,6 +31,11 @@ To use Rust within Raycast:
    The crate should have a bin section:
 
    ```toml
+   [package]
+   name = "my-rust-api"
+   version = "0.1.0"
+   edition = "2021"
+
    [[bin]]
    name = "my-rust-api"
    path = "src/main.rs"
@@ -41,6 +47,9 @@ To use Rust within Raycast:
    + [dependencies]
    + raycast-rust-macros = { git = "https://github.com/raycast/extensions-rust-tools", package = "raycast-rust-macros", branch = "main" }
    + raycast-rust-runtime = { git = "https://github.com/raycast/extensions-rust-tools", package = "raycast-rust-runtime", branch = "main" }
+   + serde = { version = "1.0", features = ["derive"] }
+   + serde_json = "1.0"
+   + tokio = { version = "1.0", features = ["full"] }
    ```
 
 4. Import `raycast_rust_macros` in your Rust file.
